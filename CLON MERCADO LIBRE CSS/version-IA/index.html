@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MercadoLibre - Clon Profesional</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🛒 MercadoLibre</div>
+        <nav class="nav">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">☰</label>
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#buscar">Buscar</a></li>
+                <li><a href="#ofertas">Ofertas</a></li>
+                <li><a href="#categorias">Categorías</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="buscar" class="search">
+            <h2>🔎 Buscar productos</h2>
+            <form>
+                <input type="search" placeholder="Buscar productos..." required>
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
+
+        <section id="ofertas" class="ofertas">
+            <h2>🔥 Ofertas destacadas</h2>
+            <div class="grid">
+                <article class="card">
+                    <img class="loader" src="https://via.placeholder.com/300" alt="Celular Samsung">
+                    <h3>📱 Samsung Galaxy</h3>
+                    <p class="precio">$1.200.000</p>
+                    <a href="#">Ver más</a>
+                </article>
+                <article class="card">
+                    <img class="loader" src="https://via.placeholder.com/300" alt="Laptop HP">
+                    <h3>💻 Laptop HP</h3>
+                    <p class="precio">$2.500.000</p>
+                    <a href="#">Ver más</a>
+                </article>
+                <article class="card">
+                    <img class="loader" src="https://via.placeholder.com/300" alt="Zapatillas Nike">
+                    <h3>👟 Zapatillas Nike</h3>
+                    <p class="precio">$320.000</p>
+                    <a href="#">Ver más</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="categorias" class="categorias">
+            <h2>📦 Categorías</h2>
+            <nav class="submenu">
+                <ul>
+                    <li><a href="#">⚡ Electrónica</a></li>
+                    <li><a href="#">👗 Moda</a></li>
+                    <li><a href="#">🏠 Hogar</a></li>
+                    <li><a href="#">🏋️ Deportes</a></li>
+                    <li><a href="#">🧸 Juguetes</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section id="contacto" class="contacto">
+            <h2>📨 Contacto</h2>
+            <form>
+                <input type="text" placeholder="Tu nombre" required>
+                <input type="email" placeholder="Tu correo" required>
+                <textarea placeholder="Tu mensaje"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
