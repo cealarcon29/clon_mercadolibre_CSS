@@ -1,0 +1,219 @@
+:root {
+    --primary: #ffe600;
+    --secondary: #3483fa;
+    --dark: #333;
+    --light: #f9f9f9;
+    --accent: #28a745;
+    --bg-color: #f4f7fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg-color);
+    color: var(--dark);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav {
+    position: relative;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--secondary);
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: var(--primary);
+        position: absolute;
+        right: 0;
+        top: 60px;
+        width: 200px;
+    }
+
+    #menu-toggle:checked + .menu-icon + .menu {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+main {
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.search form,
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+
+input, textarea, button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: var(--secondary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #2a5db0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.precio {
+    color: var(--accent);
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--secondary);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.card a:hover {
+    color: var(--primary);
+}
+
+.submenu ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.submenu li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.submenu li a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: bold;
+    padding: 8px;
+    transition: color 0.3s;
+}
+
+.submenu li a:hover {
+    color: var(--secondary);
+}
+
+footer {
+    text-align: center;
+    background: #e0e0e0;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+footer p {
+    color: var(--dark);
+}
+
+/* Animaciones de carga */
+.loader {
+    animation: fadeIn 1s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
